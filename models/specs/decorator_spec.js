@@ -6,6 +6,7 @@ let decorator;
 beforeEach(function() {
     decorator = new Decorator();
     paintCan1 = new PaintCan(4);
+    paintCan2 = new PaintCan(3);
 });
 
 describe('Decorator', function() {
@@ -20,6 +21,14 @@ describe('Decorator', function() {
         const actual = decorator.stock.length;
         assert.strictEqual(actual, 1);
     });
+
+    it('should be able to calculate total litres paint it has in stock', function(){
+        decorator.addPaintStock(paintCan2);
+        decorator.addPaintStock(paintCan1);
+        const actual = decorator.totalLitres();
+        assert.strictEqual(actual, 7);
+    })
+    
     
 
 })
