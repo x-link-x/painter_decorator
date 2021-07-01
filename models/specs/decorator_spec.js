@@ -40,9 +40,12 @@ describe('Decorator', function() {
     });
 
     it('should be able to paint room if has enough paint in stock', function() {
+        decorator.addPaintStock(paintCan1);
+        decorator.addPaintStock(paintCan2);
         decorator.addPaintStock(paintCan3);
-        decorator.paintRoom();
+        decorator.paintRoom(room);
         assert.strictEqual(room.painted, true);
+        // assert.strictEqual(paintCan1.isEmpty(), true);
     })
     
     

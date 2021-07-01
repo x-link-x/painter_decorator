@@ -17,10 +17,16 @@ class Decorator{
     }
 
     hasEnoughPaint(room) {
-        if (room.area <= this.totalLitres()) {
+        if (room.area < this.totalLitres()) {
             return true;
         } else {
             return false;
+        }
+    }
+
+    paintRoom(room) {
+        if (this.hasEnoughPaint(room) === true) {
+            room.painted = true;
         }
     }
 }
