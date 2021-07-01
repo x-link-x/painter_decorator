@@ -8,6 +8,7 @@ beforeEach(function() {
     decorator = new Decorator();
     paintCan1 = new PaintCan(4);
     paintCan2 = new PaintCan(3);
+    paintCan3 = new PaintCan(14)
     room = new Room(20);
 });
 
@@ -29,13 +30,19 @@ describe('Decorator', function() {
         decorator.addPaintStock(paintCan2);
         const actual = decorator.totalLitres();
         assert.strictEqual(actual, 7);
-    })
+    });
 
-    it('shoudl be able to calculate whether it has enough paint to paint a room', function() {
+    it('should be able to calculate whether it has enough paint to paint a room', function() {
         decorator.addPaintStock(paintCan1);
         decorator.addPaintStock(paintCan2);
         const actual = decorator.hasEnoughPaint(room);
         assert.strictEqual(actual, false);
+    });
+
+    it('should be able to paint room if has enough paint in stock', function() {
+        decorator.addPaintStock(paintCan3);
+        decorator.paintRoom();
+        assert.strictEqual(room.painted, true);
     })
     
     
