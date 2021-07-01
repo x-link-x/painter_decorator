@@ -8,7 +8,9 @@ class PaintCan{
         return this.litres === 0;
     }
 
-    
+    emptyItself(){
+        this.litres = 0;
+    }
 }
 
 module.exports = PaintCan;
