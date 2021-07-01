@@ -15,6 +15,10 @@ class Decorator{
         }
         return total;
     }
+
+    hasEnoughPaint() {
+        
+    }
 }
 
 module.exports = Decorator;
