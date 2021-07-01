@@ -34,7 +34,7 @@ describe('Decorator', function() {
     it('shoudl be able to calculate whether it has enough paint to paint a room', function() {
         decorator.addPaintStock(paintCan1);
         decorator.addPaintStock(paintCan2);
-        const actual = hasEnoughPaint(room);
+        const actual = decorator.hasEnoughPaint(room);
         assert.strictEqual(actual, false);
     })
     

@@ -16,8 +16,12 @@ class Decorator{
         return total;
     }
 
-    hasEnoughPaint() {
-        
+    hasEnoughPaint(room) {
+        if (room.area < this.totalLitres()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
