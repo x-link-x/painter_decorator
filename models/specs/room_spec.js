@@ -8,7 +8,7 @@ beforeEach(function() {
 
 describe('Room', function() {
 
-    it('should have an area in sqaure meters', function() {
+    it('should have an area in square meters', function() {
         const actual = room.area;
         assert.strictEqual(actual, 20);
     });
